@@ -1,0 +1,24 @@
+<nav class="navbar navbar-expand-md navbar-dark bg-dark">
+  <a class="navbar-brand text-white">La Bodega</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown"
+    aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarNavDropdown">
+    <ul class="navbar-nav ml-auto">
+      <li class="nav-item">
+        <a class="nav-link" [routerLink]="['/tienda']" [routerLinkActive]="'active'"><i class="fas fa-home"></i>
+          Inicio
+        </a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" [routerLink]="['/carrito']" [routerLinkActive]="'active'"><i
+            class="fas fa-shopping-cart"></i> Carrito <span class="badge badge-pill badge-danger"
+            *ngIf="isShopping">{{ productsLength }}</span></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" (click)="Logout()"><i class="fas fa-sign-out-alt"></i> Salir</a>
+      </li>
+    </ul>
+  </div>
+</nav>

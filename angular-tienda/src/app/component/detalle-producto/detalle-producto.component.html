@@ -1,0 +1,21 @@
+<barra-superior></barra-superior>
+
+<div class="container">
+  <h3 class="mt-3">{{products.nombre}}</h3>
+  <hr>
+  <div class="row mt-4">
+    <div class="col-md-6">
+      <img [src]="products.url" [alt]="products.nombre" class="img-fluid">
+    </div>
+    <div class="col-md-6">
+      <div class="row">
+        <div class="col">
+          <p><strong>Precio: </strong>{{products.precio}}</p>
+          <p><strong>Unidades disponibles: </strong>{{products.stock}}</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <br>
+  <button [routerLink]="['/tienda']" class="btn btn-dark">Atrás</button>
+</div>

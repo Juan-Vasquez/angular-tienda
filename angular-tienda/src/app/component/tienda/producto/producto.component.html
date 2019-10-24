@@ -1,0 +1,22 @@
+<div class="card mb-4">
+  <img [src]="product.url" class="card-img-top" [alt]="product.nombre | uppercase">
+  <div class="card-body">
+    <h5 class="card-title">{{product.nombre}}</h5>
+    <p class="card-text"><strong>Precio: {{product.precio}}</strong></p>
+    <p class="card-text"><strong>Unidades disponibles: {{product.stock}}</strong></p>
+    <div class="row">
+      <div class="d-flex flex-row">
+        <div class="col-md-5">
+          <button [routerLink]="['/detalle-producto', product.id]" class="btn btn-primary btn-sm">Ver
+            más</button>
+        </div>
+        <div class="col-md-7">
+          <div class="d-flex flex-row">
+            <button class="btn btn-success btn-sm" (click)="addProduct(units.value)">Añadir</button>
+            <input type="number" #units class="form-control ml-2" value="1">
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

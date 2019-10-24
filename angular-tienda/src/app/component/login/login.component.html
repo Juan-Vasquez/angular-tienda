@@ -1,0 +1,17 @@
+<div class="row h-100 login">
+  <div class="col-sm-9 col-md-6 mx-auto d-flex justify-content-center align-items-center">
+    <form class="w-100" autocomplete="off" [formGroup]="form" (submit)="Login()">
+      <h1 class="text-white text-center">Inicio de sesión</h1>
+      <div class="form-group">
+        <label class="text-white" for="emailInput">Corre electrónico</label>
+        <input type="email" class="form-control" id="emailInput" aria-describedby="emailHelp"
+          formControlName="email" placeholder="correo electronico">
+      </div>
+      <div class="form-group">
+        <label class="text-white" for="passwordInput">Contraseña</label>
+        <input type="password" class="form-control" id="passwordInput" formControlName="password" placeholder="contraseña">
+      </div>
+      <button type="submit" class="btn btn-primary">Ingresar</button>
+    </form>
+  </div>
+</div>
